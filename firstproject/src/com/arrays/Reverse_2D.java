@@ -2,7 +2,7 @@ package com.arrays;
 
 import java.util.Scanner;
 
-public class TwoD_Array {
+public class Reverse_2D {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -25,30 +25,32 @@ public class TwoD_Array {
 			}
 			System.out.println();
 		}
-		// Transpose
-		int[][] transpose = new int[size2][size1];
-		for (int i = 0; i < size1; i++) {
-			for (int j = 0; j < size2; j++) {
-				transpose[j][i] = arr[i][j];
+		System.out.println("Your transposed array is:");
+		for(int i=0;i<size1;i++) {
+			for(int j=i;j<size2;j++) {
+				int temp=arr[i][j];
+				arr[i][j]=arr[j][i];
+				arr[j][i]=temp;
 			}
 		}
-		// reversing without transpose
-		System.out.println("without using transpose");
 		for (int i = 0; i < size2; i++) {
 			for (int j = 0; j < size1; j++) {
-				System.out.print(arr[j][i] + " ");
+				System.out.print(arr[i][j] + " ");
 			}
 			System.out.println();
 		}
-
-		System.out.println("Your Exchanged rows and columns using transpose: ");
-		for (int i = 0; i < size2; i++) {
-			for (int j = 0; j < size1; j++) {
-				System.out.print(transpose[i][j] + " ");
+		System.out.println("Your reversed array is:");
+		
+		for (int i = 0; i <size2; i++) {
+			for (int j = size1-1; j>=0; j--) {
+				System.out.print(arr[i][j] + " ");
 			}
 			System.out.println();
 		}
+		
+		
 		sc.close();
+		
 	}
 
 }
