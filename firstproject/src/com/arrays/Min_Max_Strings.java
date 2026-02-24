@@ -26,6 +26,7 @@ public class Min_Max_Strings {
 		}
 		System.out.println(min);
 		System.out.println(max);
+		sc.close();
 	}
 
 }
