@@ -10,11 +10,12 @@ public class Chicken_legs {
 		   int legs=sc.nextInt();
 		   int chicken=0;
 		   int rabbit=0;
-		   while(heads%2==0 && legs%6==0 ) {
-			   chicken=chicken+1;
-			   rabbit=rabbit+1;
-			   heads=heads-2;
-			   legs=legs-6;
+		   
+		   while(legs%4==0) {
+			   
+		   }
+		   if(legs%4!=0){
+			   System.out.println("Can't be decided");
 		   }
 
 		   System.out.println(chicken);
